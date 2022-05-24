@@ -40,7 +40,8 @@ Route::middleware([
         $admin = User::where('usertype', 'admin')->count();
         $student = User::where('usertype', 'student')->count();
         $class = StudentClass::count();
-        $year = StudentYear::count();
+        $year = StudentYear::count(); 
+        
 
         return view('admin.index', compact('admin', 'student', 'class', 'year'));
 
