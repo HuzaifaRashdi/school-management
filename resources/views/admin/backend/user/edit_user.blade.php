@@ -94,7 +94,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-6">
+                                <!-- <div class="col-6">
                                         <div class="form-group">
                                         <h5>User Password<span class="text-danger">*</span></h5>
                                         <div class="controls">
@@ -108,7 +108,8 @@
 
 											</span>
                                     </div>
-                                </div>
+                                </div> -->
+								
                             </div>
 
 

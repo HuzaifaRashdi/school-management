@@ -16,8 +16,8 @@
 								<i class="text-primary mr-0 font-size-24 mdi mdi-account-multiple"></i>
 							</div>
 							<div>
-								<p class="text-mute mt-20 mb-0 font-size-16">New Customers</p>
-								<h3 class="text-white mb-0 font-weight-500">3400 <small class="text-success"><i class="fa fa-caret-up"></i> +2.5%</small></h3>
+								<p class="text-mute mt-20 mb-0 font-size-16">Total Admins</p>
+								<h3 class="text-white mb-0 font-weight-500">{{$admin}}</h3>
 							</div>
 						</div>
 					</div>
@@ -29,8 +29,8 @@
 								<i class="text-warning mr-0 font-size-24 mdi mdi-car"></i>
 							</div>
 							<div>
-								<p class="text-mute mt-20 mb-0 font-size-16">Sold Cars</p>
-								<h3 class="text-white mb-0 font-weight-500">3400 <small class="text-success"><i class="fa fa-caret-up"></i> +2.5%</small></h3>
+								<p class="text-mute mt-20 mb-0 font-size-16">Total Students</p>
+								<h3 class="text-white mb-0 font-weight-500">{{$student}} </h3>
 							</div>
 						</div>
 					</div>
@@ -42,8 +42,8 @@
 								<i class="text-info mr-0 font-size-24 mdi mdi-sale"></i>
 							</div>
 							<div>
-								<p class="text-mute mt-20 mb-0 font-size-16">Sales Lost</p>
-								<h3 class="text-white mb-0 font-weight-500">$1,250 <small class="text-danger"><i class="fa fa-caret-down"></i> -0.5%</small></h3>
+								<p class="text-mute mt-20 mb-0 font-size-16">Total Classes</p>
+								<h3 class="text-white mb-0 font-weight-500">{{$class}}</h3>
 							</div>
 						</div>
 					</div>
@@ -55,8 +55,8 @@
 								<i class="text-danger mr-0 font-size-24 mdi mdi-phone-incoming"></i>
 							</div>
 							<div>
-								<p class="text-mute mt-20 mb-0 font-size-16">Inbound Call</p>
-								<h3 class="text-white mb-0 font-weight-500">1,460 <small class="text-danger"><i class="fa fa-caret-up"></i> -1.5%</small></h3>
+								<p class="text-mute mt-20 mb-0 font-size-16">Total Student Years</p>
+								<h3 class="text-white mb-0 font-weight-500">{{$year}} </h3>
 							</div>
 						</div>
 					</div>

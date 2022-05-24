@@ -7,6 +7,10 @@ use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Backend\Setup\StudentClassController;
 use App\Http\Controllers\Backend\Setup\StudentYearController;
 use App\Http\Controllers\Backend\Setup\StudentGroupController;
+use App\Models\User;
+use App\Models\StudentClass;
+use App\Models\StudentYear;
+
 
 
 
@@ -32,7 +36,13 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', function () {
         // return view('dashboard');
-        return view('admin.index');
+
+        $admin = User::where('usertype', 'admin')->count();
+        $student = User::where('usertype', 'student')->count();
+        $class = StudentClass::count();
+        $year = StudentYear::count();
+
+        return view('admin.index', compact('admin', 'student', 'class', 'year'));
 
     })->name('dashboard');
 });
