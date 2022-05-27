@@ -17,7 +17,7 @@
 				  <!-- logo for regular state and mobile devices -->
 					 <div class="d-flex align-items-center justify-content-center">					 	
 						  <img src="{{asset('backend/images/logo-dark.png')}}" alt="">
-						  <h3><b>School</b> ERP</h3>
+						  <h3><b>School</b> ERP Learning</h3>
 					 </div>
 				</a>
 			</div>
@@ -74,9 +74,11 @@
             <li><a href="{{route('student.class.view')}}"><i class="ti-more"></i>Student Class </a></li>
             <li><a href="{{route('student.year.view')}}"><i class="ti-more"></i>Student Year</a></li>
             <li><a href="{{route('student.group.view')}}"><i class="ti-more"></i>Student Group</a></li>
+            <li><a href="{{route('student.fee.view')}}"><i class="ti-more"></i>Student Fee Category</a></li>
+            <li><a href="{{route('fee.amount.view')}}"><i class="ti-more"></i>Fee Category Amount</a></li>
 
 
-            
+
           </ul>
         </li>
         

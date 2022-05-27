@@ -7,9 +7,14 @@ use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Backend\Setup\StudentClassController;
 use App\Http\Controllers\Backend\Setup\StudentYearController;
 use App\Http\Controllers\Backend\Setup\StudentGroupController;
+use App\Http\Controllers\Backend\Setup\StudentFeeController;
+use App\Http\Controllers\Backend\Setup\FeeAmountController;
+
 use App\Models\User;
 use App\Models\StudentClass;
 use App\Models\StudentYear;
+use App\Models\StudentFee;
+
 
 
 
@@ -41,7 +46,7 @@ Route::middleware([
         $student = User::where('usertype', 'student')->count();
         $class = StudentClass::count();
         $year = StudentYear::count(); 
-        
+
 
         return view('admin.index', compact('admin', 'student', 'class', 'year'));
 
@@ -127,6 +132,32 @@ Route::get('student/group/edit/{id}', [StudentGroupController::class, 'editGroup
 Route::post('student/group/update/{id}', [StudentGroupController::class, 'updateGroup'])->name('student.group.update');
 
 //End student group routes
+
+//Start student fee routes
+Route::get('student/fee/view', [StudentFeeController::class, 'viewFeeList'])->name('student.fee.view');
+Route::get('student/fee/add', [StudentFeeController::class, 'addFee'])->name('student.fee.add');
+
+Route::post('student/fee/store', [StudentFeeController::class, 'storeFee'])->name('student.fee.store');
+
+Route::get('student/fee/delete/{id}', [StudentFeeController::class, 'deleteFee'])->name('student.fee.delete');
+Route::get('student/fee/edit/{id}', [StudentFeeController::class, 'editFee'])->name('student.fee.edit');
+
+Route::post('student/fee/update/{id}', [StudentFeeController::class, 'updateFee'])->name('student.fee.update');
+
+//End student fee routes
+
+//Start student fee routes
+Route::get('fee/amount/view', [FeeAmountController::class, 'viewFeeAmount'])->name('fee.amount.view');
+Route::get('sfee/amount/add', [FeeAmountController::class, 'addFeeAmount'])->name('fee.amount.add');
+
+// Route::post('student/fee/store', [StudentFeeController::class, 'storeFee'])->name('student.fee.store');
+
+// Route::get('student/fee/delete/{id}', [StudentFeeController::class, 'deleteFee'])->name('student.fee.delete');
+// Route::get('student/fee/edit/{id}', [StudentFeeController::class, 'editFee'])->name('student.fee.edit');
+
+// Route::post('student/fee/update/{id}', [StudentFeeController::class, 'updateFee'])->name('student.fee.update');
+
+//End student fee routes
 
 });
 
